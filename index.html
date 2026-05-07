@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuditAI — Free AI Spend Auditor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="AuditAI — Free AI Spend Auditor">
+    <meta property="og:description" content="Find out if you're overspending on AI tools. Free instant audit.">
+    <meta property="og:type" content="website">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">AuditAI</div>
+        <div class="nav-tagline">Free AI Spend Auditor</div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Are you <span>overspending</span><br>on AI tools?</h1>
+        <p>Enter what you pay. Get an instant audit showing exactly where to save.</p>
+    </section>
+
+    <!-- FORM -->
+    <div class="form-container">
+
+        <!-- TEAM INFO -->
+        <div class="section-title">Your Team</div>
+        <div class="team-info">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Team Size</label>
+                    <select id="teamSize">
+                        <option value="1">Just me (1)</option>
+                        <option value="2">2 people</option>
+                        <option value="5">3–5 people</option>
+                        <option value="10">6–10 people</option>
+                        <option value="25">11–25 people</option>
+                        <option value="50">26–50 people</option>
+                        <option value="100">50+ people</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Primary Use Case</label>
+                    <select id="useCase">
+                        <option value="coding">Coding / Engineering</option>
+                        <option value="writing">Writing / Content</option>
+                        <option value="data">Data Analysis</option>
+                        <option value="research">Research</option>
+                        <option value="mixed">Mixed / General</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOOLS -->
+        <div class="section-title">Your AI Tools</div>
+        <div id="toolsContainer"></div>
+
+        <button class="add-tool-btn" onclick="addToolCard()">
+            + Add another tool
+        </button>
+
+        <button class="submit-btn" onclick="runAudit()">
+            Get My Free Audit →
+        </button>
+
+    </div>
+
+    <script src="js/audit.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>

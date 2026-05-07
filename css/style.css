@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0f0f0f;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #1e1e1e;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #00ff88;
+}
+
+.nav-tagline {
+    font-size: 14px;
+    color: #888;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.hero h1 span {
+    color: #00ff88;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #aaa;
+    max-width: 500px;
+    margin: 0 auto 40px;
+}
+
+/* FORM CONTAINER */
+.form-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+.section-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #00ff88;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+/* TOOL CARD */
+.tool-card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+.tool-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.tool-card-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: #ff4444;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 12px;
+    color: #888;
+    font-weight: 500;
+}
+
+.form-group select,
+.form-group input {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 10px 12px;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+    border-color: #00ff88;
+}
+
+/* TEAM INFO */
+.team-info {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+/* BUTTONS */
+.add-tool-btn {
+    width: 100%;
+    padding: 14px;
+    background: transparent;
+    border: 2px dashed #333;
+    border-radius: 12px;
+    color: #888;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 24px;
+    transition: all 0.2s;
+}
+
+.add-tool-btn:hover {
+    border-color: #00ff88;
+    color: #00ff88;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background: #00ff88;
+    border: none;
+    border-radius: 12px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .hero h1 { font-size: 32px; }
+    .form-row { grid-template-columns: 1fr; }
+    .navbar { padding: 16px 20px; }
+}
