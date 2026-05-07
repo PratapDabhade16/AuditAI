@@ -23,3 +23,25 @@
 - Write audit engine functions in audit.js
 - Start with Cursor and Claude audit logic first
 
+## Day 2 — 2025-05-07
+**Hours worked:** 3
+
+**What I did:**
+- Built full spend input form with dynamic tool cards
+- Implemented localStorage persistence for form state
+- Built audit engine with logic for all 8 tools
+- Covered plan right-sizing, cross-tool alternatives, seat optimization
+
+**What I learned:**
+- Cursor Business vs Pro threshold is significant for small teams
+- GitHub Copilot Individual vs Business is a common overspend pattern
+- Claude Max at $100/mo is genuinely overkill for most solo users
+
+**Blockers / what I'm stuck on:**
+- Results page UI needs to look impressive — spending time on design tomorrow
+- Need to test all audit logic edge cases
+
+**Plan for tomorrow:**
+- Build results.html with hero savings number
+- Connect audit.js output to a clean visual display
+- Make it look good enough to screenshot
