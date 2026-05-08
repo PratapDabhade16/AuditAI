@@ -187,3 +187,382 @@ body {
     .form-row { grid-template-columns: 1fr; }
     .navbar { padding: 16px 20px; }
 }
+
+/* ─────────────────────────────────────────────────────────── */
+/* RESULTS PAGE — Day 3 additions below                        */
+/* ─────────────────────────────────────────────────────────── */
+
+.results-page {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+}
+
+/* HERO SAVINGS */
+.savings-hero {
+    text-align: center;
+    padding: 60px 20px 48px;
+    position: relative;
+}
+
+.savings-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0,255,136,0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.savings-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #00ff88;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.savings-amount {
+    font-size: 72px;
+    font-weight: 800;
+    color: #00ff88;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.savings-period {
+    font-size: 18px;
+    color: #888;
+    margin-bottom: 4px;
+}
+
+.savings-annual {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 32px;
+}
+
+.savings-annual span {
+    color: #00ff88;
+    font-weight: 600;
+}
+
+/* OPTIMAL BADGE */
+.optimal-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0,255,136,0.1);
+    border: 1px solid rgba(0,255,136,0.3);
+    border-radius: 99px;
+    padding: 8px 20px;
+    font-size: 14px;
+    color: #00ff88;
+    margin-bottom: 32px;
+}
+
+/* CREDEX BANNER */
+.credex-banner {
+    background: linear-gradient(135deg, #0a1f0a, #0d2b1a);
+    border: 1px solid rgba(0,255,136,0.3);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.credex-banner h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.credex-banner p {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.credex-btn {
+    display: inline-block;
+    background: #00ff88;
+    color: #000;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.credex-btn:hover { opacity: 0.85; }
+
+/* TOOL BREAKDOWN */
+.breakdown-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #00ff88;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.tool-result-card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 14px;
+    transition: border-color 0.2s;
+}
+
+.tool-result-card:hover {
+    border-color: #3a3a3a;
+}
+
+.tool-result-card.danger {
+    border-left: 3px solid #ff4444;
+}
+
+.tool-result-card.warning {
+    border-left: 3px solid #ffaa00;
+}
+
+.tool-result-card.ok {
+    border-left: 3px solid #00ff88;
+}
+
+.tool-result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.tool-result-name {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.tool-result-plan {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+}
+
+.tool-savings-badge {
+    font-size: 18px;
+    font-weight: 700;
+    color: #00ff88;
+    white-space: nowrap;
+}
+
+.tool-savings-badge.no-savings {
+    font-size: 13px;
+    color: #555;
+    font-weight: 500;
+}
+
+.tool-result-recommendation {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.tool-result-reason {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.5;
+}
+
+.tool-spend-row {
+    display: flex;
+    gap: 16px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #222;
+    font-size: 12px;
+    color: #555;
+}
+
+.tool-spend-row span { color: #888; }
+
+/* AI SUMMARY */
+.summary-card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 32px;
+}
+
+.summary-card h3 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #00ff88;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.summary-text {
+    font-size: 15px;
+    color: #ccc;
+    line-height: 1.7;
+}
+
+.summary-loading {
+    color: #555;
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* EMAIL CAPTURE */
+.email-capture {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 14px;
+    padding: 28px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.email-capture h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.email-capture p {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.email-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.email-form input {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.email-form input:focus {
+    border-color: #00ff88;
+}
+
+.email-submit-btn {
+    background: #00ff88;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 13px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.email-submit-btn:hover { opacity: 0.85; }
+
+.email-success {
+    color: #00ff88;
+    font-size: 15px;
+    font-weight: 600;
+    display: none;
+}
+
+/* SHARE */
+.share-card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.share-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.share-card p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 16px;
+}
+
+.share-url-box {
+    display: flex;
+    gap: 8px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.share-url-box input {
+    flex: 1;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: #888;
+    font-size: 13px;
+    outline: none;
+}
+
+.copy-btn {
+    background: #222;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 10px 16px;
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.copy-btn:hover {
+    border-color: #00ff88;
+    color: #00ff88;
+}
+
+/* BACK BTN */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #555;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 20px 0;
+    transition: color 0.2s;
+}
+
+.back-btn:hover { color: #00ff88; }
+
+@media (max-width: 600px) {
+    .savings-amount { font-size: 52px; }
+    .tool-result-header { flex-direction: column; gap: 8px; }
+    .share-url-box { flex-direction: column; }
+}

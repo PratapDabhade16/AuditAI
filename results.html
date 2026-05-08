@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your AI Spend Audit — AuditAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Open Graph — updated dynamically by JS -->
+    <meta property="og:title" content="My AI Spend Audit — AuditAI">
+    <meta property="og:description" content="I could save money on AI tools. Check your stack free.">
+    <meta property="og:type" content="website">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">AuditAI</div>
+        <a href="index.html" class="back-btn">← Edit Audit</a>
+    </nav>
+
+    <div class="results-page">
+
+        <!-- HERO SAVINGS -->
+        <div class="savings-hero">
+            <div class="savings-label">Your Monthly Savings Opportunity</div>
+            <div class="savings-amount" id="heroSavings">$0</div>
+            <div class="savings-period">per month</div>
+            <div class="savings-annual" id="heroAnnual"></div>
+        </div>
+
+        <!-- OPTIMAL / CREDEX BANNER (shown conditionally) -->
+        <div id="optimalBadge" style="text-align:center; margin-bottom:32px; display:none;">
+            <div class="optimal-badge">
+                ✓ You're spending well — your AI stack is well optimized
+            </div>
+            <p style="color:#555; font-size:13px; margin-top:12px;">
+                We'll notify you when new optimizations apply to your stack.
+            </p>
+        </div>
+
+        <div id="credexBanner" class="credex-banner" style="display:none;">
+            <h3>💰 You could save even more with Credex</h3>
+            <p>
+                Credex sells discounted AI credits — Cursor, Claude, ChatGPT Enterprise and more —
+                sourced from companies that overforecast. The discount is real and substantial.
+            </p>
+            <a href="https://credex.rocks" target="_blank" class="credex-btn">
+                Book a Free Credex Consultation →
+            </a>
+        </div>
+
+        <!-- AI SUMMARY -->
+        <div class="summary-card">
+            <h3>AI Personalized Summary</h3>
+            <div class="summary-text" id="summaryText">
+                <span class="summary-loading">Generating your personalized summary...</span>
+            </div>
+        </div>
+
+        <!-- TOOL BREAKDOWN -->
+        <div class="breakdown-title">Tool by Tool Breakdown</div>
+        <div id="toolBreakdown"></div>
+
+        <!-- EMAIL CAPTURE -->
+        <div class="email-capture" id="emailCapture">
+            <h3>Get your full report by email</h3>
+            <p>We'll send your audit summary and notify you when new savings apply to your stack.</p>
+            <!-- honeypot field — hidden from real users -->
+            <input type="text" id="honeypot" style="display:none;" tabindex="-1" autocomplete="off">
+            <div class="email-form">
+                <input type="email" id="emailInput" placeholder="you@startup.com" />
+                <input type="text" id="companyInput" placeholder="Company name (optional)" />
+                <input type="text" id="roleInput" placeholder="Your role (optional)" />
+                <button class="email-submit-btn" onclick="submitEmail()">
+                    Send My Report →
+                </button>
+                <div class="email-success" id="emailSuccess">
+                    ✓ Report sent! Check your inbox.
+                </div>
+            </div>
+        </div>
+
+        <!-- SHARE -->
+        <div class="share-card">
+            <h3>Share your audit</h3>
+            <p>Public link — your email and company name are not shown</p>
+            <div class="share-url-box">
+                <input type="text" id="shareUrl" readonly />
+                <button class="copy-btn" onclick="copyShareUrl()">Copy Link</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/audit.js"></script>
+    <script src="js/results.js"></script>
+</body>
+</html>
