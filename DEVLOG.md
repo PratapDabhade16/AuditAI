@@ -45,3 +45,31 @@
 - Build results.html with hero savings number
 - Connect audit.js output to a clean visual display
 - Make it look good enough to screenshot
+
+## Day 3 — 2025-05-08
+**Hours worked:** 3
+
+**What I did:**
+- Built results.html from scratch after first attempt failed to load
+- Built js/results.js — renders hero savings, tool breakdown cards, AI summary
+- Fixed audit.js — improved ChatGPT Team logic for different seat ranges
+- Fixed form.js — added spend sanity check, replaced template literals
+- Tested with real inputs — Claude Max + GitHub Copilot Enterprise showing correct savings
+- AI summary generating correctly via Groq fallback
+
+**What I learned:**
+- Results page was blank because script load order matters — audit.js must load before results.js
+- Template literals can cause issues in some environments — plain string concatenation is safer
+- ChatGPT Team pricing logic needs multiple cases for different seat ranges
+- The fallback summary is actually good enough that Groq API failure doesn't matter
+
+**Blockers / what I'm stuck on:**
+- Groq API not connecting yet — using fallback summary for now
+- Supabase not connected yet — email capture stores to localStorage only
+- Share URL points to localhost — needs real deployed URL
+
+**Plan for tomorrow:**
+- Connect Groq API properly for real AI summaries
+- Set up Supabase table and connect email capture
+- Set up Resend for transactional email
+- Deploy to Netlify to get real URL
