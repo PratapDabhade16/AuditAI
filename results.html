@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Open Graph — updated dynamically by JS -->
+    <!-- Open Graph -->
     <meta property="og:title" content="My AI Spend Audit — AuditAI">
     <meta property="og:description" content="I could save money on AI tools. Check your stack free.">
     <meta property="og:type" content="website">
@@ -31,7 +31,7 @@
             <div class="savings-annual" id="heroAnnual"></div>
         </div>
 
-        <!-- OPTIMAL / CREDEX BANNER (shown conditionally) -->
+        <!-- OPTIMAL BADGE -->
         <div id="optimalBadge" style="text-align:center; margin-bottom:32px; display:none;">
             <div class="optimal-badge">
                 ✓ You're spending well — your AI stack is well optimized
@@ -41,6 +41,7 @@
             </p>
         </div>
 
+        <!-- CREDEX BANNER -->
         <div id="credexBanner" class="credex-banner" style="display:none;">
             <h3>💰 You could save even more with Credex</h3>
             <p>
@@ -68,7 +69,6 @@
         <div class="email-capture" id="emailCapture">
             <h3>Get your full report by email</h3>
             <p>We'll send your audit summary and notify you when new savings apply to your stack.</p>
-            <!-- honeypot field — hidden from real users -->
             <input type="text" id="honeypot" style="display:none;" tabindex="-1" autocomplete="off">
             <div class="email-form">
                 <input type="email" id="emailInput" placeholder="you@startup.com" />
@@ -95,9 +95,10 @@
 
     </div>
 
+    <!-- Script order matters — config first, then backend, then audit, then results -->
+    <script src="js/config.js"></script>
+    <script src="js/backend.js"></script>
     <script src="js/audit.js"></script>
     <script src="js/results.js"></script>
 </body>
 </html>
-
-<!--done-->
