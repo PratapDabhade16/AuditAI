@@ -73,3 +73,33 @@
 - Set up Supabase table and connect email capture
 - Set up Resend for transactional email
 - Deploy to Netlify to get real URL
+
+
+## Day 4 — 2025-05-09
+**Hours worked:** 3
+
+**What I did:**
+- Created audits table in Supabase with all required columns
+- Built backend.js with saveAuditToSupabase and sendConfirmationEmail
+- Fixed Supabase RLS issue — disabled row level security so inserts work
+- Connected email capture form to real Supabase backend
+- Data now saving successfully to database
+- Moved all API keys to config.js
+- Fixed GitHub push protection error — removed secret from git history
+- Added config.js to gitignore so keys never get pushed again
+
+**What I learned:**
+- Supabase enables Row Level Security by default — blocks all inserts silently
+- Never commit API keys — GitHub will block the push automatically
+- git rebase -i can rewrite history to remove secrets from old commits
+- Always add config files with secrets to gitignore from Day 1
+
+**Blockers / what I'm stuck on:**
+- Resend email delivery needs verification
+- Share URL still points to localhost — needs real deployed URL tomorrow
+
+**Plan for tomorrow:**
+- Deploy to Netlify — get live URL
+- Build audit.html for public shareable pages
+- Run Lighthouse score
+- Start writing all documentation files
