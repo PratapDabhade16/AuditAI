@@ -135,6 +135,3 @@ async function sendConfirmationEmail(email, company, totalSavings, annualSavings
         return false
     }
 }
-// done
-//done
-//done

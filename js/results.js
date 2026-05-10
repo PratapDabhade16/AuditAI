@@ -215,8 +215,3 @@ renderHero()
 renderBreakdown()
 generateSummary()
 setupShareUrl()
-
-
-
-// done
-//done

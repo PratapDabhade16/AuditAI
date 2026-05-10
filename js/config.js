@@ -4,11 +4,8 @@
 // Before pushing to GitHub, replace with "YOUR_KEY_HERE"
 
 const CONFIG = {
-    SUPABASE_URL: //"",
-    SUPABASE_ANON_KEY: // "",
-    GROQ_API_KEY: // "",
-    RESEND_API_KEY: //""
+    SUPABASE_URL: "YOUR_SUPABASE_URL_HERE",
+    SUPABASE_ANON_KEY: "YOUR_SUPABASE_ANON_KEY_HERE",
+    GROQ_API_KEY: "YOUR_GROQ_API_KEY_HERE",
+    RESEND_API_KEY: "YOUR_RESEND_API_KEY_HERE"
 }
-
-//done
-// done
