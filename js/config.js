@@ -9,3 +9,5 @@ const CONFIG = {
     GROQ_API_KEY: // "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",
     RESEND_API_KEY: //"re_WLphQtKU_KXRZPGhwaGZkTHht8NjhGeha"
 }
+
+// done
