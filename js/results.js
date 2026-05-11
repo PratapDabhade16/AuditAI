@@ -11,12 +11,9 @@ if (savedTools.length === 0) {
 // ─── RUN AUDIT ───────────────────────────────────────────────
 const audit = runFullAudit(savedTools, teamSize, useCase)
 
-// ─── GENERATE UNIQUE AUDIT ID ────────────────────────────────
-let auditId = localStorage.getItem("auditai_current_id")
-if (!auditId) {
-    auditId = crypto.randomUUID()
-    localStorage.setItem("auditai_current_id", auditId)
-}
+// ─── GENERATE FRESH AUDIT ID EVERY TIME ──────────────────────
+const auditId = crypto.randomUUID()
+localStorage.setItem("auditai_current_id", auditId)
 
 // ─── RENDER HERO SAVINGS ─────────────────────────────────────
 function renderHero() {
