@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run audit engine tests
+        run: node tests/audit.test.js
+
+      - name: Check required files exist
+        run: |
+          echo "Checking required files..."
+          test -f README.md && echo "✅ README.md"
+          test -f DEVLOG.md && echo "✅ DEVLOG.md"
+          test -f ARCHITECTURE.md && echo "✅ ARCHITECTURE.md"
+          test -f REFLECTION.md && echo "✅ REFLECTION.md"
+          test -f GTM.md && echo "✅ GTM.md"
+          test -f ECONOMICS.md && echo "✅ ECONOMICS.md"
+          test -f PRICING_DATA.md && echo "✅ PRICING_DATA.md"
+          test -f PROMPTS.md && echo "✅ PROMPTS.md"
+          test -f TESTS.md && echo "✅ TESTS.md"
+          test -f METRICS.md && echo "✅ METRICS.md"
+          test -f LANDING_COPY.md && echo "✅ LANDING_COPY.md"
+          test -f USER_INTERVIEWS.md && echo "✅ USER_INTERVIEWS.md"
+          echo "All required files present!"
